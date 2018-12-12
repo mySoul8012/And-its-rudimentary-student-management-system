@@ -1,11 +1,9 @@
 public class Main {
 
     public static void main(String[] args) {
-        System.out.println("Hello World!");
-    }
-
-    @Override
-    public boolean equals(Object obj) {
-        return super.equals(obj);
+        try {
+            Class.forName("com.mysql.jdbc.Driver");
+        } catch (ClassNotFoundException e) {
+        }
     }
 }
