@@ -1,6 +1,7 @@
 package com.ming.view;
 
 import javax.swing.*;
+import javax.swing.text.JTextComponent;
 import java.awt.*;
 import java.awt.event.*;
 
@@ -8,7 +9,7 @@ import java.awt.event.*;
 * @auto ming
 * 对于主UI界面的抽象类
 * */
-abstract class AbstractMainUi extends JFrame {
+abstract class AbstractMainUi extends JFrame implements ActionListener{
     /*
     * 默认按钮个数
     * @param COUNT static from 2
@@ -18,12 +19,11 @@ abstract class AbstractMainUi extends JFrame {
     * 提取内容面板
     */
     private Container container = this.getContentPane();
-    private Box box = new Box(2);
-    /*
-    * 布局方式 设置为BorderLayout 布局方式，高度和宽度为10
-    * @param BorderLayout from hfap 10 wgap 10
-    * */
-    private FlowLayout layout = new FlowLayout();
+
+    public JButton[] getJbuttons() {
+        return jbuttons;
+    }
+
     /*
     * 界面按钮
     * */
@@ -31,7 +31,7 @@ abstract class AbstractMainUi extends JFrame {
     /*
     * JLabel
     * */
-    private JLabel jlabel;
+    private JLabel jlabel = new JLabel("破烂的学生管理系统",JLabel.CENTER);
     /*
     * 加载图片,中间图片
     * @param img ./../file/index.png
@@ -43,34 +43,44 @@ abstract class AbstractMainUi extends JFrame {
     * */
     private ImageIcon imgRight = new ImageIcon("src/com/ming/file/user.jpg");
     /*
+    * swing 面板容器
+    * @param new JPanel()
+    * */
+    private JPanel innerPanelRight = new JPanel();
+    private JPanel innerPanelLeft = new JPanel();
+    /*
     * 构造函数
     * @param final static COUNT 2
     * */
     protected AbstractMainUi(){
         super("破烂的学生管理系统管理启动界面");
-        // 设置布局 为BorderLayout
-        this.container.setLayout(this.layout);
-        // 默认新建两个按钮,并添加
+        this.container.setLayout(new BorderLayout(100,20));   // 界面总布局
+        // 设置两个内容面板布局
+        this.innerPanelLeft.setLayout(new GridLayout(2,1,50,50));
+        // 默认新建两个按钮,并添加,并绑定事件
         jbuttons = new JButton[COUNT];
-        for(int i = 0; i < COUNT; i++){
-            this.jbuttons[i] = new JButton("学生登录");
-            this.jbuttons[i] = new JButton("教师登录");
-            // 并添加到西部
-            this.box.add(this.jbuttons[i]);
-        }
-        this.container.add(box);
+        this.jbuttons[0] = new JButton("学生登录");
+        this.jbuttons[0].addActionListener(this);
+        this.jbuttons[1] = new JButton("教师登录");
+        this.jbuttons[1].addActionListener(this);
+        this.innerPanelLeft.add(this.jbuttons[0]);
+        this.innerPanelLeft.add(this.jbuttons[1]);
+        this.container.add(this.innerPanelLeft,BorderLayout.WEST);
         // 添加图片到中间
-        this.container.add(new JLabel(this.img),BorderLayout.CENTER);
+        this.innerPanelRight.setLayout(new FlowLayout());
+        this.innerPanelRight.add(new JLabel(this.img));
         // 添加图片到右边
-        this.container.add(new JLabel(this.imgRight),BorderLayout.EAST);
+        this.innerPanelRight.add(new JLabel(this.imgRight));
+        this.container.add(this.innerPanelRight,BorderLayout.EAST);
+        // 添加底部文字
+        this.jlabel.setFont(new Font("Dialog", 1,40));
+        this.container.add(this.jlabel, BorderLayout.SOUTH);
         // 设置大小，并显示
-        this.setExtendedState(JFrame.MAXIMIZED_BOTH);   // 最大化
+        this.setUndecorated(true);
+        this.setSize(900,500);  // 设置大小
+        this.setLocationRelativeTo(null);   // 居中
         this.setAlwaysOnTop(true);  // 设置在前方
-        this.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE); // 调用Systm.exit进行退出操作
         this.setVisible(true);  // 显示操作
+        this.setDefaultCloseOperation(EXIT_ON_CLOSE); // 关闭时间
     }
-    protected AbstractMainUi(JLabel jlabel) {
-        this.jlabel = jlabel;
-    }
-    protected abstract void a();
 }
