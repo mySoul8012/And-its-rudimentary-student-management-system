@@ -8,11 +8,11 @@ public class Login {
     private JPanel Login;
     private JTextField textField1;
     private JPasswordField passwordField1;
-    private JButton 登录Button;
-    private JButton 清空Button;
+    private JButton LoginButton;
+    private JButton CleaerButton;
 
     public Login() {
-        登录Button.addActionListener(new ActionListener() {
+        LoginButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 System.out.println(textField1.getText());
