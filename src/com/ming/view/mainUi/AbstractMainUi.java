@@ -1,7 +1,6 @@
-package com.ming.view;
+package com.ming.view.mainUi;
 
 import javax.swing.*;
-import javax.swing.text.JTextComponent;
 import java.awt.*;
 import java.awt.event.*;
 

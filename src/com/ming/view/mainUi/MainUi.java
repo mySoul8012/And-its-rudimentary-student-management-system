@@ -1,7 +1,7 @@
-package com.ming.view;
+package com.ming.view.mainUi;
 
 import java.awt.event.ActionEvent;
-// 事件处理
+// 主UI界面的事件处理
 public class MainUi extends AbstractMainUi {
     @Override
     public void actionPerformed (ActionEvent e){
