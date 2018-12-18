@@ -1,7 +1,7 @@
-import com.ming.tools.StudentUi;
-import com.ming.view.*;
-import com.ming.view.student.Student;
-
+import com.ming.ServiceLayer.DBConnection;
+import com.ming.view.mainUi.MainUi;
+import com.ming.view.studentUI.StudentUI;
+import com.ming.entity.Student;
 import javax.swing.*;
 
 public class Main {
@@ -10,6 +10,9 @@ public class Main {
         //MainUi mainUi = new MainUi();
         //Login login = new Login();
         //JFrame test = new Test();
-        JFrame student = new Student();
+        //Student student = new Student();
+        //student.setAge("12");
+        //JFrame test = new StudentUI(student);
+        DBConnection dbConnection = new DBConnection();
     }
 }
