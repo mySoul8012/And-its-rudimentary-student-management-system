@@ -1,9 +1,10 @@
 package com.ming.ServiceLayer;
 
 import com.ming.entity.User;
+import com.ming.tools.Encryption;
+
 import java.sql.*;
 import javax.xml.crypto.Data;
-
 // 该类封装了对user表的操作 包含查询和增加
 public class UserLogin extends DBConnection{
     private String name;
@@ -26,70 +27,60 @@ public class UserLogin extends DBConnection{
         this.expireTime = _user.getExpireTime();
         // 拼接sql
         this.sql = "SELECT password FROM user WHERE name = " + "'" + this.name + "'" + ";";
+        //System.out.println(sql);
         // 执行sql
         super.executeQuery();
         // 进行判断
         ResultSet  rs = this.getResultSet();
-        while(rs.next()){
-            if(rs.getString(1).equals(this.password.toUpperCase())){
+        while (rs.next()) {
+            if(rs.getString(1).equals(Encryption.getSHA(this.password))){
                 return true;
-            }else {
-                return false;
             }
         }
         return false;
     }
     // 注册用户增加
-    public boolean addUser(User _user) throws Exception{
-        this.name = _user.getName();
-        this.password = _user.getPassword();
-        this.createData = _user.getCreateData();
-        this.expireTime = _user.getExpireTime();
+    public boolean addUser(User user) throws Exception{
+        this.name = user.getName();
+        this.password = user.getPassword();
+        this.createData = user.getCreateData();
+        this.expireTime = user.getExpireTime();
         // 拼接sql
-        this.sql = "INSERT user(name,password) VALUES(' "+ this.name + "', '" + this.password.toUpperCase() + "');";
+        this.sql = "INSERT user(name,password) VALUES('"+ this.name + "', '" + Encryption.getSHA(this.password) + "');";
         //this.sql = "Insert user(name,password) values('sefwf', 'eferfef');";
         // 执行sql
         super.executeQuery();
         // 进行判断
         String rs = this.getResultSetUpdate();
-        if(rs.equals("1")){
-            return true;
-        }
-        return false;
+        return "1".equals(rs);
     }
     // 注册用户删除
-    public boolean deleteUser(User _user)throws Exception{
-        this.name = _user.getName();
-        this.password = _user.getPassword();
-        this.expireTime = _user.getExpireTime();
-        this.expireTime = _user.getExpireTime();
+    public boolean deleteUser(User user)throws Exception{
+        this.name = user.getName();
+        this.password = user.getPassword();
+        this.expireTime = user.getExpireTime();
+        this.expireTime = user.getExpireTime();
         // 拼接sql
         this.sql = "DELETE FROM user WHERE name = '" + this.name + "' ";
         // 执行
         super.executeQuery();
         // 进行判断
         String rs = this.getResultSetUpdate();
-        if(rs.equals("1")){
-            return true;
-        }
-        return false;
+        return "1".equals(rs);
     }
     // 注册用户更改
-    public boolean updat(User _oldUser, User _user)throws Exception{
-        this.name = _user.getName();
-        this.password = _user.getPassword();
-        this.expireTime = _user.getExpireTime();
-        this.expireTime = _user.getExpireTime();
+    public boolean updat(User olduser, User user)throws Exception{
+        this.name = user.getName();
+        this.password = user.getPassword();
+        this.expireTime = user.getExpireTime();
+        this.expireTime = user.getExpireTime();
         // 拼接sql
-        this.sql = "UPDATE user SET name = '" + this.name + "', password = '" + this.password.toUpperCase() + "' WHERE name = '"  + _oldUser.getName() + "';";
+        this.sql = "UPDATE user SET name = '" + this.name + "', password = '" + Encryption.getSHA(this.password) + "' WHERE name = '"  + olduser.getName() + "';";
         //System.out.println(this.sql);
         // 执行
         super.executeQuery();
         // 进行判断
         String rs = this.getResultSetUpdate();
-        if(rs.equals("1")){
-            return true;
-        }
-        return false;
+        return "1".equals(rs);
     }
 }

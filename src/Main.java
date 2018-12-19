@@ -16,24 +16,20 @@ public class Main {
         //Student student = new Student();
         //student.setAge("12");
         //JFrame test = new StudentUI(student);
+       User user = new User();
+       user.setName("sdgr");
+       user.setPassword("sdfsfs");
+       UserLogin userLogin = new UserLogin();
+       try{
+           if(userLogin.login(user)){
+               System.out.println("登录成功");
+           }else{
+               System.out.println("登录失败");
+           };
+       }catch (Exception e){
+           System.out.println(e);
+       }
         /*
-        UserLogin userLogin = new UserLogin();
-        User oldUser = new User();
-        User user = new User();
-        oldUser.setName("admin");
-        oldUser.setPassword("frrrsfsf");
-        user.setName("admin");
-        user.setPassword("123456thrthr78");
-        try {
-            if(userLogin.updat(oldUser,user)){
-                System.out.println("登录成功");
-            }else{
-                System.out.println("登录失败");
-            }
-        }catch(Exception e){
-            System.out.println(e);
-        }
-        */
         try {
             Student student = new Student();
             student.setSno("0780505001");
@@ -44,6 +40,6 @@ public class Main {
         }catch(Exception e){
             System.out.println(e);
         }
-
+        */
     }
 }
