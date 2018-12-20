@@ -4,7 +4,10 @@ import java.math.BigInteger;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 
-// 此类封装了sha-2的加密算法，实现传入String类型，返回加密后的sha-2 的String类型
+/**
+ * @author ming
+ * 此类封装了sha-2的加密算法，实现传入String类型，返回加密后的sha-2 的String类型
+ */
 public class Encryption {
     public static String getSHA(String input){
         try{
@@ -31,11 +34,11 @@ public class Encryption {
         }
     }
 
-
+    /*
     public static void main(String[] args){
         String s1 = "sdfsfsrgd";
         System.out.println(getSHA(s1));
 
     }
-
+    */
 }

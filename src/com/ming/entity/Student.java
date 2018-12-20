@@ -7,6 +7,13 @@ public class Student {
     private String sex; // 性别
     private String age; // 年龄
     private String dept;    // 系别
+    public Student(){
+        this.age = "";
+        this.dept = "";
+        this.sex = "";
+        this.sn = "";
+        this.sno = "";
+    }
     public String getSno(){
         return this.sno;
     }

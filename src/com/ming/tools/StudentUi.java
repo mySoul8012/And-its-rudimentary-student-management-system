@@ -5,7 +5,10 @@ import javax.swing.border.BevelBorder;
 import javax.swing.border.Border;
 import java.awt.*;
 
-// 该类为StudentUi的通用界面
+/**
+ * @author ming
+ * 该类为StudentUi的通用界面
+ */
 public class StudentUi extends JPanel {
     protected JPanel innerPanelCenter, innerPanelSouth;
     protected JButton doTask1, doTask2;

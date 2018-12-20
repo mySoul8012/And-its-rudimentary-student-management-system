@@ -3,7 +3,10 @@ package com.ming.ServiceLayer;
 import java.sql.*;
 import java.lang.Exception;
 
-// 数据库连接类
+/**
+ * @author ming
+ * 数据库连接类
+ */
 public class DBConnection {
     // 连接
     private Connection connection = null;

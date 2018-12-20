@@ -2,15 +2,19 @@ package com.ming.ServiceLayer;
 
 import com.ming.entity.User;
 import com.ming.tools.Encryption;
+import com.ming.tools.TransferredMeaning;
+import java.sql.ResultSet;
+import java.util.Date;
 
-import java.sql.*;
-import javax.xml.crypto.Data;
-// 该类封装了对user表的操作 包含查询和增加
+/**
+ * @author ming
+ * 该类封装了对user表的操作 包含查询和增加
+ */
 public class UserLogin extends DBConnection{
     private String name;
     private String password;
-    private Data createData;
-    private Data expireTime;
+    private Date createData;
+    private Date expireTime;
     public UserLogin(){
         super();    // 和数据库建立连接
     }
@@ -19,8 +23,10 @@ public class UserLogin extends DBConnection{
         // 获取当前登录信息
         // 用户姓名
         this.name = _user.getName();
+        this.name = TransferredMeaning.getTransferredMeaning(this.name);
         // 密码
         this.password = _user.getPassword();
+        this.password = TransferredMeaning.getTransferredMeaning(this.password);
         // 创建时间
         this.createData = _user.getCreateData();
         // 过期时间
@@ -31,7 +37,7 @@ public class UserLogin extends DBConnection{
         // 执行sql
         super.executeQuery();
         // 进行判断
-        ResultSet  rs = this.getResultSet();
+        ResultSet rs = this.getResultSet();
         while (rs.next()) {
             if(rs.getString(1).equals(Encryption.getSHA(this.password))){
                 return true;
@@ -42,7 +48,9 @@ public class UserLogin extends DBConnection{
     // 注册用户增加
     public boolean addUser(User user) throws Exception{
         this.name = user.getName();
+        this.name = TransferredMeaning.getTransferredMeaning(this.name);
         this.password = user.getPassword();
+        this.password = TransferredMeaning.getTransferredMeaning(this.password);
         this.createData = user.getCreateData();
         this.expireTime = user.getExpireTime();
         // 拼接sql
@@ -57,8 +65,10 @@ public class UserLogin extends DBConnection{
     // 注册用户删除
     public boolean deleteUser(User user)throws Exception{
         this.name = user.getName();
+        this.name = TransferredMeaning.getTransferredMeaning(this.name);
         this.password = user.getPassword();
-        this.expireTime = user.getExpireTime();
+        this.password = TransferredMeaning.getTransferredMeaning(this.password);
+        this.createData = user.getCreateData();
         this.expireTime = user.getExpireTime();
         // 拼接sql
         this.sql = "DELETE FROM user WHERE name = '" + this.name + "' ";
@@ -71,11 +81,13 @@ public class UserLogin extends DBConnection{
     // 注册用户更改
     public boolean updat(User olduser, User user)throws Exception{
         this.name = user.getName();
+        this.name = TransferredMeaning.getTransferredMeaning(this.name);
         this.password = user.getPassword();
-        this.expireTime = user.getExpireTime();
+        this.password = TransferredMeaning.getTransferredMeaning(this.password);
+        this.createData = user.getCreateData();
         this.expireTime = user.getExpireTime();
         // 拼接sql
-        this.sql = "UPDATE user SET name = '" + this.name + "', password = '" + Encryption.getSHA(this.password) + "' WHERE name = '"  + olduser.getName() + "';";
+        this.sql = "UPDATE user SET name = '" + this.name + "', password = '" + Encryption.getSHA(this.password) + "' WHERE name = '"  + TransferredMeaning.getTransferredMeaning(olduser.getName()) + "';";
         //System.out.println(this.sql);
         // 执行
         super.executeQuery();

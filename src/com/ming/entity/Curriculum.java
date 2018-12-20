@@ -5,6 +5,11 @@ public class Curriculum {
     private String cno;
     private String cn;
     private String hourc;
+    public Curriculum(){
+        this.cn = "";
+        this.hourc = "";
+        this.cno = "";
+    }
     public String getCno(){
         return this.cno;
     }

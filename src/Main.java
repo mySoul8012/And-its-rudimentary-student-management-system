@@ -6,6 +6,8 @@ import com.ming.view.mainUi.MainUi;
 import com.ming.view.studentUI.StudentUI;
 import com.ming.entity.Student;
 import javax.swing.*;
+import java.util.ArrayList;
+import java.util.List;
 
 public class Main {
 
@@ -16,6 +18,7 @@ public class Main {
         //Student student = new Student();
         //student.setAge("12");
         //JFrame test = new StudentUI(student);
+
        User user = new User();
        user.setName("sdgr");
        user.setPassword("sdfsfs");
@@ -29,17 +32,16 @@ public class Main {
        }catch (Exception e){
            System.out.println(e);
        }
-        /*
+
         try {
-            Student student = new Student();
-            student.setSno("0780505001");
+            List<Student> list = new ArrayList<Student>();
             StudentInfoTable studentInfoTable = new StudentInfoTable();
-            if(studentInfoTable.addStudent(student)){
-                System.out.println("增加成功");
+            list = studentInfoTable.listStudent(0,3);
+            for(Student tmpStudent: list){
+                System.out.println(tmpStudent.getAge());
             }
         }catch(Exception e){
             System.out.println(e);
         }
-        */
     }
 }
