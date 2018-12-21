@@ -118,6 +118,30 @@ public class StudentInfoTable extends DBConnection{
         String rs = this.getResultSetUpdate();
         return "1".equals(rs);
     }
+
+    /**
+     * @param student
+     * @return boolean
+     * 删除学生
+     */
+    public boolean deleteStudent(Student student)throws Exception{
+       this.age = student.getAge();
+       this.age = TransferredMeaning.getTransferredMeaning(this.age);
+       this.sn = student.getSn();
+       this.sn = TransferredMeaning.getTransferredMeaning(this.sn);
+       this.sex = student.getSex();
+       this.sex = TransferredMeaning.getTransferredMeaning(this.sex);
+       this.dept = student.getDept();
+       this.dept = TransferredMeaning.getTransferredMeaning(this.dept);
+       this.sno = student.getSno();
+       this.sno = TransferredMeaning.getTransferredMeaning(this.sno);
+       // 拼接sql
+        this.sql = "DELETE FROM s WHERE sno='" + this.sno + "';";
+        // 执行
+        this.executeQuery();
+        // 获取结果
+        return "1".equals(this.getResultSetUpdate());
+    }
     /**
      * @param limt
      * @param length
@@ -136,13 +160,15 @@ public class StudentInfoTable extends DBConnection{
         // 获取结果
         ResultSet rs = this.getResultSet();
         List<Student> list = new ArrayList<Student>();
-        Student tmpStudent = new Student();
         while(rs.next()){
+            Student tmpStudent = new Student();
+            //System.out.println(rs.getString(1));
             tmpStudent.setSno(rs.getString(1));
             tmpStudent.setSn(rs.getString(2));
             tmpStudent.setSex(rs.getString(3));
             tmpStudent.setAge(rs.getString(4));
             tmpStudent.setDept(rs.getString(5));
+            //System.out.println(tmpStudent.getSno());
             list.add(tmpStudent);
         }
         return list;

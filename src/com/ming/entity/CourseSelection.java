@@ -5,6 +5,11 @@ public class CourseSelection {
     private String sno;
     private String cno;
     private String grade;
+    public CourseSelection(){
+        this.sno = "";
+        this.cno = "";
+        this.grade = "";
+    }
     public String getSno(){
         return this.sno;
     }

@@ -1,0 +1,9 @@
+
+msquid:S00116"VRename this field "LoginButton" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ú–€N
+msquid:S00116"PRename this field "Login" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÛªÿÀşÿÿÿÿ
+O
+squid:S106"9Replace this use of System.out or System.err by a logger.(şğë
+tsquid:S00116"WRename this field "CleaerButton" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÍÁÏúÿÿÿÿ
+?squid:S1604"(Make this anonymous inner class a lambda(î¶Îğ
+?squid:S1604"(Make this anonymous inner class a lambda(ô¯òÜ
+0squid:S1700"Rename field "Login"(ÛªÿÀşÿÿÿÿ

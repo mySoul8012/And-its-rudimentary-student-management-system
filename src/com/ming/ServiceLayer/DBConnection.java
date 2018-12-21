@@ -59,7 +59,7 @@ public class DBConnection {
         }
         return false;
     }
-    public ResultSet getResultSet(){
+    public ResultSet getResultSet() throws Exception{
         return this.resultSet;
     }
     public String getResultSetUpdate(){
