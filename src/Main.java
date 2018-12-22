@@ -1,7 +1,5 @@
-import com.ming.ServiceLayer.CurrlculumTable;
-import com.ming.ServiceLayer.DBConnection;
-import com.ming.ServiceLayer.StudentInfoTable;
-import com.ming.ServiceLayer.UserLogin;
+import com.ming.ServiceLayer.*;
+import com.ming.entity.CourseSelection;
 import com.ming.entity.Curriculum;
 import com.ming.entity.User;
 import com.ming.view.mainUi.MainUi;
@@ -35,6 +33,7 @@ public class Main {
            System.out.println(e);
        }
 */
+        /*
         try {
             List<Student> list = new ArrayList<Student>();
             StudentInfoTable studentInfoTable = new StudentInfoTable();
@@ -45,6 +44,7 @@ public class Main {
         }catch(Exception e){
             System.out.println(e);
         }
+        */
         /*
         try{
             List<Curriculum> list = new ArrayList<Curriculum>();
@@ -57,5 +57,22 @@ public class Main {
             System.out.println(e);
         }
         */
+        /*
+        try{
+            CourseSelection courseSelection = new CourseSelection();
+            CourseSelectionTable courseSelectionTable = new CourseSelectionTable();
+            courseSelection.setCno("050150");
+            courseSelection.setSno("23424");
+            CourseSelection newCourseSelection = new CourseSelection();
+            newCourseSelection.setGrade("2324");
+            List<CourseSelection> list = new ArrayList<CourseSelection>();
+            if(courseSelectionTable.changeCourseSelection(courseSelection,newCourseSelection)){
+                System.out.println("增加成功");
+            }
+        }catch(Exception e){
+            System.out.println(e);
+        }
+        */
+
     }
 }

@@ -105,7 +105,7 @@ public class CurrlculumTable extends DBConnection{
         }
         // 拼接sql
         this.sql = "SELECT cno,cn,hourc FROM c LIMIT " + limt * length + "," + length + ";";
-        System.out.println(sql);
+        //System.out.println(sql);
         // 执行sql
         super.executeQuery();
         // 获取结果
