@@ -1,12 +1,13 @@
-import com.ming.ServiceLayer.*;
+import com.ming.MiddleLayer.AbstractColleague;
+import com.ming.MiddleLayer.AbstractMiddleLayer;
+import com.ming.MiddleLayer.StudentScenes;
+import com.ming.MiddleLayer.tertiumQuid;
 import com.ming.entity.CourseSelection;
 import com.ming.entity.Curriculum;
-import com.ming.entity.User;
-import com.ming.view.mainUi.MainUi;
-import com.ming.view.studentUI.StudentUI;
 import com.ming.entity.Student;
-import javax.swing.*;
+
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 public class Main {
@@ -73,6 +74,12 @@ public class Main {
             System.out.println(e);
         }
         */
-
+        AbstractMiddleLayer middleLayer = new tertiumQuid();
+        StudentScenes studentScenes = new StudentScenes(middleLayer);
+        List<Curriculum> list = new ArrayList<Curriculum>();
+        list = studentScenes.StudentElectiveCourse("0680506001");
+        for(Curriculum curriculum:list){
+            System.out.println(curriculum.getCn());
+        }
     }
 }

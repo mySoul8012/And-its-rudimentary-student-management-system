@@ -49,6 +49,7 @@ public class StudentInfoTable extends DBConnection{
         this.dept = TransferredMeaning.getTransferredMeaning(this.dept);
         // 拼接sql
         this.sql = "SELECT sno,sn,sex,age,dept FROM s WHERE sno = '" + this.sno + "' ;";
+        //System.out.println(this.sql);
         // 执行sql
         super.executeQuery();
         // 获取结果
