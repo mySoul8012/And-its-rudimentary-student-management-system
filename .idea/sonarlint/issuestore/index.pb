@@ -33,3 +33,33 @@ _
 /src/com/ming/ServiceLayer/StudentInfoTable.java,2/c/2c36404dd837d7b9f44530664b9be03ed4baf8be
 ^
 .src/com/ming/ServiceLayer/CurrlculumTable.java,e/9/e9d0c0d653e68e43982165ab50e9afb1a20e4637
+_
+/src/com/ming/MiddleLayer/AbstractColleague.java,0/b/0b6ae5b46a16acdda79e5328bf9dcaabfcac2007
+W
+'src/com/ming/entity/AbstractEntity.java,5/8/584a1afcf18ebe5f763cf47f3855b7fe45d5d40c
+[
++src/com/ming/MiddleLayer/TeacherScenes.java,b/c/bccc78c1472617c854a2e284b54ad760ae5eb4b7
+a
+1src/com/ming/MiddleLayer/AbstractMiddleLayer.java,c/c/cc2d55a33e4a68b3272aef52abdfecfeb56dcae0
+S
+#src/com/ming/MiddleLayer/Login.java,8/b/8bb4e5a738e5759bf78649e8471b6642a83e2e9f
+Y
+)src/com/ming/MiddleLayer/tertiumQuid.java,b/f/bfab723c748112f6f03b8b16b039f15520183087
+[
++src/com/ming/MiddleLayer/StudentScenes.java,3/a/3a190377063b0c9fd17ec9aed0ffbf5f68316b28
+c
+3src/com/ming/ServiceLayer/CourseSelectionTable.java,6/1/61f27d09dfeba888f0791771ea93d04102fb6850
+b
+2src/com/ming/view/studentUI/StudentCurrlculum.java,b/e/be8510d06d71eeeeafce2d5f1940c84b3118d677
+N
+src/com/ming/entity/phone.java,2/5/255b9dee3b86c044c4797a77158d4d12d1e8ae39
+L
+src/com/ming/view/Login.form,2/0/20357e1a2ff2214fd0507262acd8ff3ec3836706
+O
+src/com/ming/Configuration.json,5/3/536b8127fce6620419b2d716cfe5d9a9fb46a505
+P
+ src/com/ming/tools/ReadJson.java,6/f/6fd1cc64e8bfdd5579e01cf26ed4a8c4b2e5efc4
+O
+src/com/ming/tools/Message.java,4/7/47e817a28b20d75f0d598d7251fa2484ed7f75cb
+Y
+)src/com/ming/ServiceLayer/phoneTable.java,b/d/bd8b8275aebed065edfaaffe70726ba2a9814dae

@@ -1,15 +1,16 @@
 
-usquid:UselessImportCheck"QRemove this unnecessary import: java.lang classes are always implicitly imported.(®ş±Ã
+[squid:S2147%"DCombine this catch with the one at line 35, which has the same body.(É®£
 rsquid:S00115"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(îëËå
-rsquid:S2068"V'password' detected in this expression, review this potentially hard-coded credential.(ß”±¸ûÿÿÿÿ
-rsquid:S00115"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(¡ø‹Ğ
-wsquid:S00115"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(ß”±¸ûÿÿÿÿ
+©%squid:RedundantThrowsDeclarationCheck>"lRemove the declaration of thrown exception 'java.lang.Exception', as it cannot be thrown from method's body.(…¾ƒœúÿÿÿÿ8í³Î×ı,
 7squid:S2068!" Remove this hard-coded password.(‹ë²”
-T
-squid:S106$"9Replace this use of System.out or System.err by a logger.(¨¶ÑÍşÿÿÿÿ
+wsquid:S00115"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(ß”±¸ûÿÿÿÿ
+wsquid:S00120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ëœĞÿÿÿÿÿ
 rsquid:S00115"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(Âı¬§
+usquid:UselessImportCheck"QRemove this unnecessary import: java.lang classes are always implicitly imported.(®ş±Ã
+rsquid:S00115"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(¡ø‹Ğ
+_squid:S2259H"HA "NullPointerException" could be thrown; "connection" is nullable here.(¥ä´¹
+rsquid:S2068"V'password' detected in this expression, review this potentially hard-coded credential.(ß”±¸ûÿÿÿÿ
 T
 squid:S106&"9Replace this use of System.out or System.err by a logger.(¨¶ÑÍşÿÿÿÿ
-wsquid:S00120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ëœĞÿÿÿÿÿ
-_squid:S2259H"HA "NullPointerException" could be thrown; "connection" is nullable here.(¥ä´¹
-[squid:S2147%"DCombine this catch with the one at line 35, which has the same body.(É®£
+T
+squid:S106$"9Replace this use of System.out or System.err by a logger.(¨¶ÑÍşÿÿÿÿ

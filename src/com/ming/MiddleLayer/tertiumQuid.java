@@ -33,7 +33,7 @@ public class tertiumQuid extends AbstractMiddleLayer{
     public AbstractMiddleLayer execute(String str, Object... objects) {
         // 登录
         if("SignIn".equals(str)){
-            this.singin((String)objects[0], (String)objects[2]);
+            this.singin((String)objects[0], (String)objects[1]);
         }
         // 找回密码
         if("RetrievePassword".equals(str)){
@@ -157,6 +157,7 @@ public class tertiumQuid extends AbstractMiddleLayer{
      */
     @Contract("_, _ -> this")
     private AbstractMiddleLayer singin(String _user, String _password){
+        //System.out.println(_password + _user);
         User user = new User();
         user.setName(_user);
         user.setPassword(_password);

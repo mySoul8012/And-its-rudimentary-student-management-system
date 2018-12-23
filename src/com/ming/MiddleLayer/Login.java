@@ -21,6 +21,7 @@ public class Login extends AbstractColleague {
      * 登录方法
      */
     public boolean userLogin(String user, String password){
+        //System.out.println(user + password);
         return super.middleLayer.execute("SignIn", user, password).getResult();
     }
 

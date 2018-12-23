@@ -1,5 +1,5 @@
 
-Isquid:S1659"-Declare "innerPanelSouth" on a separate line.(ïÝÕ¸ýÿÿÿÿ
-Zsquid:UselessImportCheck"6Remove this unused import 'javax.swing.border.Border'.(þŒ©ƒ
 Tsquid:S1197"8Move the array designator from the variable to the type.(Š«×Œúÿÿÿÿ
 <squid:S1659"%Declare "doTask2" on a separate line.(î ýƒ
+Isquid:S1659"-Declare "innerPanelSouth" on a separate line.(ïÝÕ¸ýÿÿÿÿ
+Zsquid:UselessImportCheck"6Remove this unused import 'javax.swing.border.Border'.(þŒ©ƒ

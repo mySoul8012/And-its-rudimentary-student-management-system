@@ -1,5 +1,5 @@
 
 Qsquid:S1191"5Use classes from the Java API instead of Sun classes.(áÊ×Äýÿÿÿÿ
 Qsquid:S1118":Add a private constructor to hide the implicit public one.(¼ñúŽ
-ksquid:UselessImportCheck"BRemove this unused import 'com.sun.media.jfxmedia.logging.Logger'.(áÊ×Äýÿÿÿÿ
 zsquid:UselessImportCheck"QRemove this unnecessary import: java.lang classes are always implicitly imported.(ôÝžÕýÿÿÿÿ
+ksquid:UselessImportCheck"BRemove this unused import 'com.sun.media.jfxmedia.logging.Logger'.(áÊ×Äýÿÿÿÿ

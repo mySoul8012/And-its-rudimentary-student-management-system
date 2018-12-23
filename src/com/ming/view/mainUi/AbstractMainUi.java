@@ -78,7 +78,7 @@ abstract class AbstractMainUi extends JFrame implements ActionListener{
         this.setUndecorated(true);
         this.setSize(900,500);  // 设置大小
         this.setLocationRelativeTo(null);   // 居中
-        this.setAlwaysOnTop(true);  // 设置在前方
+        //this.setAlwaysOnTop(true);  // 设置在前方
         this.setVisible(true);  // 显示操作
         this.setDefaultCloseOperation(EXIT_ON_CLOSE); // 关闭时间
     }

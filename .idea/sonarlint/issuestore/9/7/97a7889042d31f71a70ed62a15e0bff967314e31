@@ -1,8 +1,3 @@
 
-Ksquid:EmptyStatementUsageCheck"Remove this empty statement.(ôŸìúÿÿÿÿ
-T
-squid:S106
-"9Replace this use of System.out or System.err by a logger.(èğ£ûÿÿÿÿ
-Fsquid:S00108")Either remove or fill this block of code.(ƒº¡áûÿÿÿÿ
+esquid:MaximumInheritanceDepth"<This class has 7 parents which is greater than 5 authorized.(¯¢Úı
 wsquid:S00120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(’Èº¯ÿÿÿÿÿ
-esquid:MaximumInheritanceDepth"<This class has 7 parents which is greater than 5 authorized.(¯¢Úı
