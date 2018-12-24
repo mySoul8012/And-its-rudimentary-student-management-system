@@ -100,7 +100,7 @@ public class tertiumQuid extends AbstractMiddleLayer{
             this.changeCurrlculum((String)objects[0], (Curriculum)objects[1]);
         }
 
-        // 进行分页
+        // 进行分页 课程
         if("listCurrlculum".equals(str)){
             this.listCurrlculum((int)objects[0], (int)objects[1]);
         }
@@ -441,7 +441,9 @@ public class tertiumQuid extends AbstractMiddleLayer{
     private AbstractMiddleLayer listCurrlculum(int limt, int length){
         CurrlculumTable currlculumTable = new CurrlculumTable();
         try{
-            currlculumTable.lisrCurriculum(limt, length);
+            System.out.println(limt + "第三个" +length );
+            this.listCurriculum = currlculumTable.lisrCurriculum(limt, length);
+            //System.out.println(this.listCurriculum.get(0).getCn());
             currlculumTable.closeStatementConnection();
         }catch (Exception e){
             System.out.println(e);

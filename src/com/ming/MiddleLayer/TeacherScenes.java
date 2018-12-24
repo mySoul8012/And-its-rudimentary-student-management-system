@@ -4,6 +4,7 @@ import com.ming.entity.Curriculum;
 import com.ming.entity.Student;
 import sun.security.util.Length;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -104,8 +105,12 @@ public class TeacherScenes extends AbstractColleague{
      * @return
      * 根据给定的limt length 进行分页
      */
-    public boolean listCurrlculum(int limt, int length){
-        return super.middleLayer.execute("listCurrlculum", limt, length).getResult();
+    public List<Curriculum> listCurrlculum(int limt, int length){
+        List<Curriculum> listCurriculum = new ArrayList<Curriculum>();
+        System.out.println(limt + " 场景" + length);
+        listCurriculum = super.middleLayer.execute("listCurrlculum", limt, length).getListCurriculum();
+        //System.out.println(listCurriculum.get(0).getCn());
+        return listCurriculum;
     }
 
     /**

@@ -34,7 +34,7 @@ public class Login {
         this.price = price;
         LoginButton.addActionListener(new ActionListener() {
             /**
-             * Invoked when an action occurs.
+             * 按钮事件处理
              *
              * @param e
              */
@@ -59,7 +59,7 @@ public class Login {
                 }
                 // 判断学生，还是教师
                 if("Student".equals(price)){
-                    // 学生 0780506004
+                    // 学生 0780506004 这是测试
                     // 从数据库中读取学生信息
                     tertiumQuid tertiumQuid = new tertiumQuid();
                     StudentScenes studentScenes = new StudentScenes(tertiumQuid);
@@ -70,7 +70,7 @@ public class Login {
         });
         CleaerButton.addActionListener(new ActionListener() {
             /**
-             * Invoked when an action occurs.
+             * 按钮事件处理
              *
              * @param e
              */
