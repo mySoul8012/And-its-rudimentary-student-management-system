@@ -35,12 +35,12 @@ abstract class AbstractMainUi extends JFrame implements ActionListener{
     * 加载图片,中间图片
     * @param img ./../file/index.png
     * */
-    private ImageIcon img = new ImageIcon("src/com/ming/file/index.png");
+    private ImageIcon img = new ImageIcon("file/index.png");
     /*
     * 加载图片 右边图片
     * @param imgRight ./../file/user.jpg
     * */
-    private ImageIcon imgRight = new ImageIcon("src/com/ming/file/user.jpg");
+    private ImageIcon imgRight = new ImageIcon("file/user.jpg");
     /*
     * swing 面板容器
     * @param new JPanel()
@@ -66,14 +66,17 @@ abstract class AbstractMainUi extends JFrame implements ActionListener{
         this.innerPanelLeft.add(this.jbuttons[1]);
         this.container.add(this.innerPanelLeft,BorderLayout.WEST);
         // 添加图片到中间
-        this.innerPanelRight.setLayout(new FlowLayout());
-        this.innerPanelRight.add(new JLabel(this.img));
+        //this.innerPanelRight.setLayout(new FlowLayout());
+        //this.innerPanelRight.add(new JLabel(this.img));
         // 添加图片到右边
-        this.innerPanelRight.add(new JLabel(this.imgRight));
-        this.container.add(this.innerPanelRight,BorderLayout.EAST);
+        //this.innerPanelRight.add(new JLabel(this.imgRight));
+        //this.container.add(this.innerPanelRight,BorderLayout.EAST);
         // 添加底部文字
         this.jlabel.setFont(new Font("Dialog", 1,40));
         this.container.add(this.jlabel, BorderLayout.SOUTH);
+        JLabel jLabelCenter = new JLabel();
+        jLabelCenter.setText("<html><img src=\"https://ww1.sinaimg.cn/large/007iUjdily1fyjhgaedpsj307n053zk2.jpg\"></html>");
+        this.container.add(jLabelCenter, BorderLayout.CENTER);
         // 设置大小，并显示
         this.setUndecorated(true);
         this.setSize(900,500);  // 设置大小

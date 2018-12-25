@@ -40,7 +40,8 @@ public class TeacherScenes extends AbstractColleague{
      * 更改学生，更改学生的基本信息
      */
     public boolean changeStudent(String sno, Student newStudent){
-        return super.middleLayer.execute("changeStudent", newStudent).getResult();
+        System.out.println(sno);
+        return super.middleLayer.execute("changeStudent", sno,newStudent).getResult();
     }
 
     /**

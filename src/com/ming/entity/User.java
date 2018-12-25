@@ -1,10 +1,9 @@
 package com.ming.entity;
 
-import javax.xml.crypto.Data;
 import java.util.Date;
 
 // 对应于数据库的user表
-public class User extends AbstractEntity{
+public class User {
     // 用户姓名
     private String name;
     // 用户密码

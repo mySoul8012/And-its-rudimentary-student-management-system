@@ -1,7 +1,7 @@
 package com.ming.entity;
 
 // 对应于数据库的s表
-public class Student extends AbstractEntity {
+public class Student {
     private String sno; // 学号
     private String sn; // 姓名
     private String sex; // 性别

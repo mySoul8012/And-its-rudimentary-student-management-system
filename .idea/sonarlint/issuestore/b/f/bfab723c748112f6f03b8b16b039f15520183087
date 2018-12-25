@@ -1,0 +1,56 @@
+
+gsquid:S00100İ"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ó•È‘
+lsquid:S00100Ë"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÄâÈÔüÿÿÿÿ
+U
+squid:S106è"9Replace this use of System.out or System.err by a logger.(¨¶ÑÍşÿÿÿÿ
+lsquid:S00100µ"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‹„ûÓøÿÿÿÿ
+psquid:S2293"YReplace the type specification in this constructor call with the diamond operator ("<>").(ÍíÒ¡
+rsquid:S00120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ÿĞ´ƒ
+`squid:HiddenFieldCheckµ">Rename "curriculum" which hides the field declared at line 22.(¦²á@
+ksquid:HiddenFieldCheckÌ"CRename "courseSelection" which hides the field declared at line 23.(ˆœª°ûÿÿÿÿ
+U
+squid:S106‡"9Replace this use of System.out or System.err by a logger.(¨¶ÑÍşÿÿÿÿ
+ksquid:HiddenFieldCheck­"CRename "courseSelection" which hides the field declared at line 23.(ˆœª°ûÿÿÿÿ
+csquid:HiddenFieldCheckš";Rename "student" which hides the field declared at line 20.(§…ù¼ùÿÿÿÿ
+fsquid:S00100ß"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÚİÅ
+U
+squid:S106Ñ"9Replace this use of System.out or System.err by a logger.(¨¶ÑÍşÿÿÿÿ
+U
+squid:S106Ô"9Replace this use of System.out or System.err by a logger.(¨¶ÑÍşÿÿÿÿ
+U
+squid:S106ö"9Replace this use of System.out or System.err by a logger.(¨¶ÑÍşÿÿÿÿ
+[squid:HiddenFieldCheckÌ"8Rename "user" which hides the field declared at line 21.(Ç­‚û
+`squid:HiddenFieldCheck’">Rename "curriculum" which hides the field declared at line 22.(¦²á@
+U
+squid:S106¡"9Replace this use of System.out or System.err by a logger.(¨¶ÑÍşÿÿÿÿ
+usquid:S2293"YReplace the type specification in this constructor call with the diamond operator ("<>").(©¢Îèøÿÿÿÿ
+usquid:S2293"YReplace the type specification in this constructor call with the diamond operator ("<>").(‰ô¹ıÿÿÿÿ
+gsquid:S00100Ç"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(³ÆÓÚ
+U
+squid:S106©"9Replace this use of System.out or System.err by a logger.(¨¶ÑÍşÿÿÿÿ
+U
+squid:S106À"9Replace this use of System.out or System.err by a logger.(¨¶ÑÍşÿÿÿÿ
+U
+squid:S106ú"9Replace this use of System.out or System.err by a logger.(¨¶ÑÍşÿÿÿÿ
+[squid:HiddenFieldCheck¡"8Rename "user" which hides the field declared at line 21.(Ç­‚û
+U
+squid:S106­"9Replace this use of System.out or System.err by a logger.(¨¶ÑÍşÿÿÿÿ
+U
+squid:S106¿"9Replace this use of System.out or System.err by a logger.(¨¶ÑÍşÿÿÿÿ
+`squid:HiddenFieldCheckğ">Rename "curriculum" which hides the field declared at line 22.(¦²á@
+Dsquid:S1068"(Remove this unused "user" private field.(’Ø¾ıÿÿÿÿ
+U
+squid:S106Õ"9Replace this use of System.out or System.err by a logger.(¨¶ÑÍşÿÿÿÿ
+nsquid:S3776!"RRefactor this method to reduce its Cognitive Complexity from 16 to the 15 allowed.(†êËØùÿÿÿÿ
+ksquid:HiddenFieldCheckÉ"CRename "courseSelection" which hides the field declared at line 23.(ˆœª°ûÿÿÿÿ
+U
+squid:S106™"9Replace this use of System.out or System.err by a logger.(¨¶ÑÍşÿÿÿÿ
+U
+squid:S106"9Replace this use of System.out or System.err by a logger.(¨¶ÑÍşÿÿÿÿ
+U
+squid:S106ã"9Replace this use of System.out or System.err by a logger.(¨¶ÑÍşÿÿÿÿ
+Jsquid:S1068"3Remove this unused "courseSelection" private field.(šÒœ…
+esquid:S00101"MRename this class name to match the regular expression '^[A-Z][a-zA-Z0-9]*$'.(ø–ë
+U
+squid:S106»"9Replace this use of System.out or System.err by a logger.(¨¶ÑÍşÿÿÿÿ
+csquid:HiddenFieldCheckà";Rename "student" which hides the field declared at line 20.(§…ù¼ùÿÿÿÿ

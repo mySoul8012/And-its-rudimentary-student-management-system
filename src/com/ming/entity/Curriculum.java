@@ -1,7 +1,7 @@
 package com.ming.entity;
 
 // 对应表c表
-public class Curriculum extends AbstractEntity{
+public class Curriculum {
     private String cno;
     private String cn;
     private String hourc;

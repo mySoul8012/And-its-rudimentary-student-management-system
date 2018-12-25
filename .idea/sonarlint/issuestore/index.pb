@@ -35,8 +35,6 @@ _
 .src/com/ming/ServiceLayer/CurrlculumTable.java,e/9/e9d0c0d653e68e43982165ab50e9afb1a20e4637
 _
 /src/com/ming/MiddleLayer/AbstractColleague.java,0/b/0b6ae5b46a16acdda79e5328bf9dcaabfcac2007
-W
-'src/com/ming/entity/AbstractEntity.java,5/8/584a1afcf18ebe5f763cf47f3855b7fe45d5d40c
 [
 +src/com/ming/MiddleLayer/TeacherScenes.java,b/c/bccc78c1472617c854a2e284b54ad760ae5eb4b7
 a

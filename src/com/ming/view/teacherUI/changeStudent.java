@@ -32,6 +32,10 @@ public class changeStudent extends JPanel implements ListSelectionListener, Acti
     private Student student = new Student();
     private int limt = 0;
     private int length = 0;
+    // 获取JPanel
+    public JPanel getjPanel(){
+        return this.jPanel;
+    }
     // 获取JScrollPane
     private JScrollPane getJScrollPane(int limt, int length){
         this.limt = limt;
@@ -67,8 +71,8 @@ public class changeStudent extends JPanel implements ListSelectionListener, Acti
         // 初始页加载到jpanel上
         this.listJpanel.add(this.jscrollPane);
         // 添加下一个按钮
-        this.listJpanel.add(this.nextJbutton);
-        this.listJpanel.add(this.previousJbutton);
+        this.jPanel.add(this.nextJbutton);
+        this.jPanel.add(this.previousJbutton);
         // 将面板添加到主面板
         this.jPanel.add(this.jscrollPane);
         // 获取编辑面板
@@ -81,6 +85,9 @@ public class changeStudent extends JPanel implements ListSelectionListener, Acti
         // 给上下一页添加事件
         this.nextJbutton.addActionListener(this);
         this.previousJbutton.addActionListener(this);
+        // 给studentUi添加事件
+        this.studentUi.getDoTask1Button().addActionListener(this);
+        this.studentUi.getDoTask2Button().addActionListener(this);
     }
 
     /**
@@ -90,7 +97,54 @@ public class changeStudent extends JPanel implements ListSelectionListener, Acti
      */
     @Override
     public void actionPerformed(ActionEvent e) {
+        if(e.getSource() == this.nextJbutton){
+            // 当点击的是下一页按钮
+            this.limt++;    // 页数加1
+            this.jPanel.remove(this.jscrollPane);
+            this.jscrollPane = this.getJScrollPane(this.limt, this.length);
+            this.jscrollPane.setVisible(true);
+            this.jPanel.add(this.jscrollPane);
+            this.jPanel.setVisible(true);
+            this.setVisible(true);
+        }
 
+        if(e.getSource() == this.previousJbutton){
+            // 当单击的是上一页按钮
+            // 排除处于页首的情况
+            if(this.limt >= 1){
+                this.limt--;    // 页数减1
+                this.jPanel.remove(this.jscrollPane);
+                this.jscrollPane = this.getJScrollPane(this.limt, this.length);
+                this.jscrollPane.setVisible(true);
+                this.jPanel.add(this.jscrollPane);
+                this.jPanel.setVisible(true);
+                this.setVisible(true);
+            }
+        }
+
+        if(e.getSource() == this.studentUi.getDoTask1Button()){
+            // 单击提交
+            Student student = new Student();
+            String[] tmpString = new String[5];
+            tmpString = this.studentUi.getFieldValues();
+            student.setSno(tmpString[0] + "");
+            student.setSn(tmpString[1] + "");
+            student.setAge(tmpString[2] + "");
+            student.setSex(tmpString[3] + "");
+            student.setDept(tmpString[4] + "");
+            // 新建场景导入
+            AbstractMiddleLayer tertlumQuld = new tertiumQuid();
+            TeacherScenes teacherScenes = new TeacherScenes(tertlumQuld);
+            if(teacherScenes.changeStudent(tmpString[0], student)){
+                JOptionPane.showMessageDialog(null,"修改成功", "添加结果",JOptionPane.PLAIN_MESSAGE);
+            }else{
+                JOptionPane.showMessageDialog(null,"修改失败", "添加结果",JOptionPane.PLAIN_MESSAGE);
+            }
+        }
+        // 单击清空
+        if(e.getSource() == this.studentUi.getDoTask2Button()){
+            this.studentUi.clearFields();
+        }
     }
 
     /**

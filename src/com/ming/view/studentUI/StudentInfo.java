@@ -14,8 +14,10 @@ public class StudentInfo extends JPanel {
         // 左头像面板
         jPanelLeft.setLayout(new GridLayout());
         // 头像图片导入
-        ImageIcon image = new ImageIcon("src/com/ming/file/user.jpg");
-        jPanelLeft.add(new JLabel(image));
+        //ImageIcon image = new ImageIcon("file/user.jpg");
+        JLabel labelImage=new JLabel();
+        labelImage.setText("<html><img src=\"https://ww1.sinaimg.cn/large/007iUjdily1fyjhif1amrj3069069t8k.jpg\"><html>");
+        jPanelLeft.add(labelImage);
         // 右头像面板
         jPanelRight.setLayout(new FlowLayout());
         // 添加到jPanelRight

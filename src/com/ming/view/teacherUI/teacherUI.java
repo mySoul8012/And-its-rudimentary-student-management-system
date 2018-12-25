@@ -13,12 +13,13 @@ public class teacherUI extends JFrame {
         super("管理界面");
         tabbedPane = new JTabbedPane(); // 创建JTabbedPane
         addStudent addStudent = new addStudent();
+        changeStudent changeStudent = new changeStudent();
         // 设置Layout
         tabbedPane.addTab("增加学生",null,addStudent.getjPanel(),"First Panel");
-        tabbedPane.addTab("学生信息更改",null, null, "First Panel");
-        tabbedPane.addTab("学生选课管理", null,null,"First Panel");
+        tabbedPane.addTab("学生信息更改",null, changeStudent.getjPanel(), "First Panel");
+        //tabbedPane.addTab("学生成绩录入", null,null,"First Panel");
         this.setContentPane(this.tabbedPane);
-        this.setSize(700,500);
+        this.setSize(1000,500);
         this.setVisible(true);
     }
 }

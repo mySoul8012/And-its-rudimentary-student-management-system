@@ -1,7 +1,7 @@
 package com.ming.entity;
 
 // 对应于sc表
-public class CourseSelection extends AbstractEntity{
+public class CourseSelection {
     private String sno;
     private String cno;
     private String grade;

@@ -1,0 +1,10 @@
+
+Fsquid:S1148("#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8³×„àı,
+]squid:S1118":Add a private constructor to hide the implicit public one.(¦µıèùÿÿÿÿ8µØàı,
+squid:UselessImportCheck"QRemove this unnecessary import: java.lang classes are always implicitly imported.(ôİÕıÿÿÿÿ8«Ïßı,
+bsquid:S2147,"DCombine this catch with the one at line 38, which has the same body.(ï­£Ä8³×„àı,
+fsquid:S1192"HDefine a constant instead of duplicating this literal "message" 4 times.(¦œì8–Ø¬áı,
+Fsquid:S1148."#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8³×„àı,
+;squid:S21196"Save and re-use this "Random".(¼İÅf8Ï·šßı,
+gsquid:S2147)"DCombine this catch with the one at line 38, which has the same body.(÷¿­¹ÿÿÿÿÿ8³×„àı,
+Fsquid:S1148+"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8³×„àı,

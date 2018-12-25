@@ -57,6 +57,7 @@ public class tertiumQuid extends AbstractMiddleLayer{
 
         // 学生信息更改
         if("changeStudent".equals(str)){
+            System.out.println(objects[0].toString());
             this.changeStudent((String)objects[0], (Student)objects[1]);
         }
 
@@ -262,6 +263,7 @@ public class tertiumQuid extends AbstractMiddleLayer{
     private AbstractMiddleLayer changeStudent(String sno, Student newStudent){
         Student oldStudent = new Student();
         oldStudent.setSno(sno);
+        System.out.println(sno);
         StudentInfoTable studentInfoTable = new StudentInfoTable();
         try{
             this.result = studentInfoTable.changeStudent(oldStudent, newStudent);
@@ -349,6 +351,7 @@ public class tertiumQuid extends AbstractMiddleLayer{
     private AbstractMiddleLayer ListStudent(int limt, int length){
         StudentInfoTable studentInfoTable = new StudentInfoTable();
         try{
+            System.out.println(limt + "  " + length);
             this.listStudent = studentInfoTable.listStudent(limt, length);
             studentInfoTable.closeStatementConnection();
         }catch (Exception e){
