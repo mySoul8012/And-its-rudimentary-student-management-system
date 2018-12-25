@@ -35,8 +35,8 @@ public class StudentUi extends JPanel {
             innerPanelCenter.add(fields[count]);
         }
         // 创建两个提交按钮
-        doTask1 = new JButton();
-        doTask2 = new JButton();
+        doTask1 = new JButton("提交");
+        doTask2 = new JButton("清空");
         innerPanelSouth = new JPanel();
         innerPanelSouth.add(doTask1);
         innerPanelSouth.add(doTask2);
@@ -44,7 +44,7 @@ public class StudentUi extends JPanel {
         setLayout(new BorderLayout());
         add(innerPanelCenter, BorderLayout.CENTER);
         add(innerPanelSouth, BorderLayout.SOUTH);
-        setSize(20,300);
+        //setSize(700,500);
         setBorder(BorderFactory.createBevelBorder(BevelBorder.RAISED));
         validate(); // 刷新布局
     }
@@ -54,6 +54,10 @@ public class StudentUi extends JPanel {
     }
     public JButton getDoTask2Button(){
         return this.doTask2;
+    }
+    // 设置第一个文本输入
+    public void setFieldsFirst(String text){
+        fields[0].setText(text);
     }
     // 获取文本输入框
     public JTextField[] getFields(){

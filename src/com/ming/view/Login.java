@@ -9,6 +9,7 @@ import com.ming.entity.Student;
 import com.ming.tools.Message;
 import com.ming.tools.StudentUi;
 import com.ming.view.studentUI.StudentUI;
+import com.ming.view.teacherUI.teacherUI;
 import jdk.nashorn.internal.scripts.JO;
 import sun.security.util.Password;
 
@@ -65,6 +66,10 @@ public class Login {
                     StudentScenes studentScenes = new StudentScenes(tertiumQuid);
                     Student student = studentScenes.BasicInformationForStudents(textField1.getText());
                     StudentUI studentUi = new StudentUI(student);
+                }else{
+                    // 为教师
+                    // 用户名 admin 密码 12345678
+                    teacherUI teacherUI = new teacherUI();
                 }
             }
         });
