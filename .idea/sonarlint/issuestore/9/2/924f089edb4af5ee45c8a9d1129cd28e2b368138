@@ -1,12 +1,0 @@
-
-[squid:UselessImportCheck
-"0Remove this unused import 'java.util.ArrayList'.(÷‰îƒ8Öï¹×ı,
-^squid:UselessImportCheck"3Remove this unused import 'com.ming.tools.Message'.(Ø Ñ8Ñ«ºáı,
-gsquid:UselessImportCheck"<Remove this unused import 'com.ming.ServiceLayer.UserLogin'.(Åª™8Öï¹×ı,
-[squid:UselessImportCheck"+Remove this unused import 'java.util.List'.(Õë±Äøÿÿÿÿ8Öï¹×ı,
-bsquid:UselessImportCheck"2Remove this unused import 'java.util.Collections'.(¢³ïÓşÿÿÿÿ8Öï¹×ı,
-asquid:UselessImportCheck"1Remove this unused import 'com.ming.entity.User'.(ÈÜü…üÿÿÿÿ8Öï¹×ı,
-gsquid:UselessImportCheck"<Remove this unused import 'com.ming.entity.CourseSelection'.(‹Œå„8Öï¹×ı,
-dsquid:UselessImportCheck"4Remove this unused import 'com.ming.entity.Student'.(şïÈùÿÿÿÿ8Öï¹×ı,
-bsquid:UselessImportCheck"7Remove this unused import 'com.ming.entity.Curriculum'.(ÄÕ©¯8Öï¹×ı,
-©%squid:RedundantThrowsDeclarationCheck"lRemove the declaration of thrown exception 'java.lang.Exception', as it cannot be thrown from method's body.(ÙØ¤Şıÿÿÿÿ8š‹…âı,
